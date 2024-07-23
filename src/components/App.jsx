@@ -1,33 +1,58 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
-import '../scss/App.scss'
+import './src/images';
+import '../scss/App.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="header">
+      <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
+        <img className="header__companyLogo" src="./images/laptop-code-solid.svg" alt="Logo proyectos molones"/>
+        <h1 className="header__title">Proyectos molones</h1>
+      </a>
+      <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
+    </header>
+    <section className="hero">
+        <h2 className="title">Proyectos molones</h2>
+        <p className="hero__text">Escaparate en línea para recoger ideas a través de la tecnología</p>
+        <a className="button--link" href="./">Ver proyectos</a>
+      </section>
+
+      <section className="preview">
+        <div className="projectImage"></div>
+        <article className="card">
+          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
+
+          <div className="card__author">
+            <div className="card__authorPhoto"></div>
+            <p className="card__job">
+              Full stack Developer
+            </p>
+            <h3 className="card__name">Emmelie Bjôrklund</h3>
+          </div>
+      
+          <div className="card__project">            
+            <h3 className="card__name">Elegant Workspace</h3>
+            <p className="card__slogan">Diseños Exclusivos</p>
+            <h3 className="card__descriptionTitle">Product description</h3>
+            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione</p>
+
+            <div className="card__technicalInfo">
+              <p className="card__technologies">React JS - HTML - CSS</p>
+          
+              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">
+                Web link
+              </a>
+              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto">
+                GitHub link
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+      
+    <footer className="footer">
+      <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
+    </footer>
     </>
   )
 }
