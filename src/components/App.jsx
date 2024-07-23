@@ -1,4 +1,4 @@
-import './src/images';
+import logo from '../images/adalab.png';
 import '../scss/App.scss';
 
 function App() {
@@ -6,10 +6,10 @@ function App() {
     <>
       <header className="header">
       <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-        <img className="header__companyLogo" src="./images/laptop-code-solid.svg" alt="Logo proyectos molones"/>
+        <img className="header__companyLogo" src={logo} alt="Logo proyectos molones"/>
         <h1 className="header__title">Proyectos molones</h1>
       </a>
-      <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
+      <img className="logoSponsor" src={logo} alt="Logo Adalab"/>
     </header>
     <section className="hero">
         <h2 className="title">Proyectos molones</h2>
@@ -51,7 +51,7 @@ function App() {
       </section>
       
     <footer className="footer">
-      <img className="logoSponsor" src="./images/adalab.png" alt="Logo Adalab"/>
+      <img className="logoSponsor" src={logo} alt="Logo Adalab"/>
     </footer>
     </>
   )
