@@ -76,7 +76,7 @@
 
 .header .header__title {
   font: var(--font-title-brand);
-  text-transform: capitalize;
+  text-transhtmlForm: capitalize;
   color: var(--color-white);
 }
 
@@ -127,7 +127,7 @@
 .preview .card {
   margin-inline: 20px;
 
-  transform: translateY(-45px);
+  transhtmlForm: translateY(-45px);
 }
 
 .card {
@@ -154,12 +154,12 @@
   position: relative;
   margin: 15px 10px 1rem 0;
   text-align: center;
-  text-transform: capitalize;
+  text-transhtmlForm: capitalize;
 
   font: var(--font-card-section);
 }
 
-.card .card__projectTitle::before {
+.card .card__projectTitle::behtmlFore {
   content: '';
   position: absolute;
   top: calc( 50% - 1px );
@@ -216,7 +216,7 @@
 
 .card .card__descriptionTitle {
   font-weight: inherit;
-  text-transform: capitalize;
+  text-transhtmlForm: capitalize;
 }
 
 .card .card__technicalInfo {
@@ -233,9 +233,9 @@
 
 
 
-/* FORM */
+/* htmlForM */
 
-.addForm {
+.addhtmlForm {
   margin: 0 20px 5px 20px;
 
   box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -243,12 +243,12 @@
   background-image: radial-gradient(circle at 50% 50%, var(--color-dusk), #211e2e 92%);
 }
 
-.addForm .title {
+.addhtmlForm .title {
   font: var(--font-title-biggest);
   margin-block: 18px;
 }
 
-.addForm .addForm__title {
+.addhtmlForm .addhtmlForm__title {
   position: relative;
   background-clip: padding-box;
   padding-block: 0.4rem;
@@ -260,7 +260,7 @@
   text-align: center;
 }
 
-.addForm .addForm__title:before {
+.addhtmlForm .addhtmlForm__title:behtmlFore {
   content: '';
   position: absolute;
   top: 100%; right: 0; bottom: 0; left: 0;
@@ -271,11 +271,11 @@
   background-image: linear-gradient(to left, transparent, #343045 25%, #c0b7e8 45%, var(--color-dark-lilac) 65%, #343045 75%, transparent );
 }
 
-.addForm .addForm__group {
+.addhtmlForm .addhtmlForm__group {
   margin-bottom: 25px;
 }
 
-.addForm .addForm__input {
+.addhtmlForm .addhtmlForm__input {
   display: block;
   width: calc( 100% - 20px );
   margin: 10px auto;
@@ -290,29 +290,29 @@
   font: var(--font-normal);
 }
 
-.addForm .addForm__input::placeholder {
+.addhtmlForm .addhtmlForm__input::placeholder {
   color: var(--color-white-50);
 }
 
-.addForm .addForm__group--upload {
+.addhtmlForm .addhtmlForm__group--upload {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 25px;
 }
 
-.addForm .addForm__hidden {
+.addhtmlForm .addhtmlForm__hidden {
   display: none;
 }
 
-.addForm .addForm__2col {
+.addhtmlForm .addhtmlForm__2col {
   width: calc( 100% - 20px );
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
 }
 
-.addForm .addForm__2col .addForm__input {
+.addhtmlForm .addhtmlForm__2col .addhtmlForm__input {
   width: calc( (100% - .2rem) / 2 );
   margin: 0;
 }
@@ -329,7 +329,7 @@
 
 .title {
   text-align: center;
-  text-transform: capitalize;
+  text-transhtmlForm: capitalize;
 }
 
 .logoSponsor {
@@ -345,7 +345,7 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transform: uppercase;
+  text-transhtmlForm: uppercase;
   text-decoration: none;
 
   -webkit-backdrop-filter: blur(10px);
@@ -372,7 +372,7 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transform: none;
+  text-transhtmlForm: none;
   text-decoration: none;
   text-align: center;
 
@@ -391,7 +391,7 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transform: none;
+  text-transhtmlForm: none;
   text-decoration: none;
   text-align: center;
 
