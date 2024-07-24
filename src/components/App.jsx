@@ -3,7 +3,10 @@ import "../scss/App.scss";
 
 function App() {
   return (
-    <>
+    <div className="body">
+    <div>
+      <h1 className="title">Molones</h1>
+    </div>
       <header className="header">
         <a
           className="header__brand"
@@ -19,7 +22,7 @@ function App() {
         </a>
         <img className="logoSponsor" src={logo} alt="Logo Adalab" />
       </header>
-      <section className="hero">
+      <div className="hero">
         <h2 className="title">Proyectos molones</h2>
         <p className="hero__text">
           Escaparate en línea para recoger ideas a través de la tecnología
@@ -27,7 +30,7 @@ function App() {
         <a className="button--link" href="./">
           Ver proyectos
         </a>
-      </section>
+        </div>
 
       <section className="preview">
         <div className="projectImage"></div>
@@ -172,7 +175,7 @@ function App() {
       <footer className="footer">
         <img className="logoSponsor" src={logo} alt="Logo Adalab" />
       </footer>
-    </>
+      </div>
   );
 }
 

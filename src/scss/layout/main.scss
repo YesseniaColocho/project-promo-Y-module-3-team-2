@@ -30,10 +30,12 @@
 }
 
 
-
+.body {
+  background-color: var(--color-dusk);
+}
 
 :root {
-  font: var(--font-normal); /* font-size: 10px; */
+  // font: var(--font-normal); /* font-size: 10px; */
   color: var(--color-white);
 }
 
@@ -93,6 +95,8 @@
 
 .hero {
   margin-bottom: 3rem;
+  background-color: var(--color-dusk);
+
 }
 
 @media screen and (min-width: 768px) {
@@ -102,8 +106,10 @@
 }
 
 .hero .title {
-  font: var(--font-title-big);
+  font: var(--font-title-brand);
   margin-bottom: 8px;
+
+  
 }
 
 .hero .hero__text {
@@ -119,7 +125,7 @@
   aspect-ratio: 1 / 1;
   outline: solid 1px pink;
 
-  background-image: url('../images/ebook-example.jpg');
+  background-image: url('/src/images/ebook-example.jpg');
   background-position: top center;
   background-size: cover;
 }
