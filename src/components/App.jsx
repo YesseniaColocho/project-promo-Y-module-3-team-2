@@ -1,12 +1,10 @@
-import logo from "../images/adalab.png";
+import logo from "../images/logo.png";
 import "../scss/App.scss";
 
 function App() {
   return (
     <div className="body">
-    <div>
-      <h1 className="title">Molones</h1>
-    </div>
+    
       <header className="header">
         <a
           className="header__brand"
