@@ -15,18 +15,18 @@
 
 
   /* FONTS */
-  --font-title-brand: 300 1.4rem 'Merriweather', sans-serif;
-  --font-title-biggest: bold 3rem 'Playwrite BE WAL', sans-serif;
-  --font-title-big: bold 2rem 'Playwrite BE WAL', sans-serif;
-  --font-title-medium: 300 1.5rem 'Playwrite BE WAL', sans-serif;
-  --font-text-big: normal 1.2rem 'Playwrite BE WAL', sans-serif;
-  --font-normal: normal 10px 'Playwrite BE WAL', sans-serif;
-  --font-button: bold 1rem 'Playwrite BE WAL', sans-serif;
-  --font-card-text: 300 .8rem 'Merriweather', sans-serif;
-  --font-card-section: 300 .8rem 'Merriweather', sans-serif;
-  --font-card-title: 500 1.2rem 'Merriweather', sans-serif;
-  --font-card-subtitle: 400 1.1rem 'Merriweather', sans-serif;
-  --font-card-tech: 500 1rem 'Merriweather', sans-serif;
+  --font-title-brand: 300 1.4rem "PT Serif", serif;
+  --font-title-biggest: bold 3rem "PT Serif", serif;
+  --font-title-big: bold 2rem "PT Serif", serif;
+  --font-title-medium: 300 1.5rem "PT Serif", serif;
+  --font-text-big: normal 1.2rem "PT Serif", serif;
+  --font-normal: normal 10px 'Playwrite BE WAL', cursive;
+  --font-button: bold 1rem 'Playwrite BE WAL', cursive;
+  --font-card-text: 300 .8rem 'Playwrite BE WAL', cursive;
+  --font-card-section: 300 .8rem 'Playwrite BE WAL', cursive;
+  --font-card-title: 500 1.2rem 'Playwrite BE WAL', cursive;
+  --font-card-subtitle: 400 1.1rem 'Playwrite BE WAL', cursive;
+  --font-card-tech: 500 1rem 'Playwrite BE WAL', cursive;
 }
 
 
@@ -125,7 +125,7 @@
   aspect-ratio: 1 / 1;
   outline: solid 1px pink;
 
-  background-image: url('/src/images/photo-principal.jpg');
+  //background-image: url('/src/images/photo-principal.jpg');
   background-position: top center;
   background-size: cover;
 }
