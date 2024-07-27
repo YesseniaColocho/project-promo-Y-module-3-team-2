@@ -73,25 +73,26 @@ function Form() {
           />
         </fieldset>
 
-        <fieldset className="addhtmlForm__group--upload" />
-        <label htmlFor="image" className="button">
-          Subir foto del proyecto
-        </label>
-        <input
-          className="addhtmlForm__hidden"
-          type="file"
-          name="image"
-          id="image"
-        />
-        <label htmlFor="photo" className="button">
-          Subir foto de la autora
-        </label>
-        <input
-          className="addhtmlForm__hidden"
-          type="file"
-          name="photo"
-          id="photo"
-        />
+        <fieldset className="addhtmlForm__group--upload">
+          <label htmlFor="image" className="button">
+            Subir foto del proyecto
+          </label>
+          <input
+            className="addhtmlForm__hidden"
+            type="file"
+            name="image"
+            id="image"
+          />
+          <label htmlFor="photo" className="button">
+            Subir foto de la autora
+          </label>
+          <input
+            className="addhtmlForm__hidden"
+            type="file"
+            name="photo"
+            id="photo"
+          />
+        </fieldset>
         <button className="button--large">Guardar proyecto</button>
       </form>
     )

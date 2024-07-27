@@ -9,17 +9,18 @@
   --color-dark: #302c42;
   --color-warm-grey: #909090;
   --color-white: #ffffff;
-  --color-dark-lilac: #8176af;
+  --color-dark-lilac: #cb6ce6;
   --color-white-50: rgba(255, 255, 255, 0.5);
 
   /* FONTS */
   --font-title-brand: 300 1.4rem "PT Serif", serif;
-  --font-title-biggest: bold 3rem "PT Serif", serif;
+  --font-title-biggest: bold 1.7em "PT Serif", serif;
   --font-title-big: bold 2rem "PT Serif", serif;
-  --font-title-medium: 300 1.5rem "PT Serif", serif;
+  --font-title-medium: 300 1.3rem "PT Serif", serif;
   --font-text-big: normal 1.2rem "PT Serif", serif;
-  --font-normal: normal 10px "Playwrite BE WAL", cursive;
-  --font-button: bold 1rem "Playwrite BE WAL", cursive;
+  --font-normal: normal 10px "PT Serif", cursive;
+  --font-button-form: bold 0.7rem "PT Serif", cursive;
+  --font-button: bold 0.7rem "Playwrite BE WAL", cursive;
   --font-card-text: 300 0.6rem "PT Serif", cursive;
   --font-card-section: 300 0.8rem "Playwrite BE WAL", cursive;
   --font-card-title-side: 500 0.8rem "PT Serif", cursive;
@@ -251,6 +252,7 @@
 
 .addhtmlForm {
   margin: 0 20px 5px 20px;
+  padding-bottom: 20px;
 
   box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px rgba(0, 0, 0, 0);
@@ -264,6 +266,7 @@
 .addhtmlForm .title {
   font: var(--font-title-biggest);
   margin-block: 18px;
+  margin-bottom: 0;
 }
 
 .addhtmlForm .addhtmlForm__title {
@@ -329,6 +332,11 @@
   margin-bottom: 25px;
 }
 
+.addhtmlForm .button,
+.addhtmlForm .button--large {
+  font: var(--font-button-form);
+}
+
 .addhtmlForm .addhtmlForm__hidden {
   display: none;
 }
@@ -373,7 +381,6 @@
   font: var(--font-button);
   text-transhtmlform: uppercase;
   text-decoration: none;
-  font-size: smaller;
 
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -382,7 +389,11 @@
   border-image-source: linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   border-image-slice: 1;
   border-radius: 20px;
-  background-color: var(--color-dark-lilac);
+  background-image: linear-gradient(
+    to right,
+    var(--color-dark-lilac) -2%,
+    #4280f4 98%
+  );
   /*
   background-image: linear-gradient(to bottom, var(--color-dark-lilac), var(--color-dark-lilac)), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
@@ -407,7 +418,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-dark-lilac) -2%,
-    #c0b7e8 98%
+    #4280f4 98%
   );
 
   cursor: pointer;
@@ -431,7 +442,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-dark-lilac) -2%,
-    #c0b7e8 98%
+    #4280f4 98%
   );
 
   cursor: pointer;
