@@ -13,20 +13,20 @@
   --color-white-50: rgba(255, 255, 255, 0.5);
 
   /* FONTS */
-  --font-title-brand: 300 1.4rem "PT Serif", serif;
+  --font-title-brand: 300 1.4em "PT Serif", serif;
   --font-title-biggest: bold 1.7em "PT Serif", serif;
-  --font-title-big: bold 2rem "PT Serif", serif;
-  --font-title-medium: 300 1.3rem "PT Serif", serif;
-  --font-text-big: normal 1.2rem "PT Serif", serif;
-  --font-normal: normal 10px "PT Serif", cursive;
-  --font-button-form: bold 0.7rem "PT Serif", cursive;
-  --font-button: bold 0.7rem "Playwrite BE WAL", cursive;
-  --font-card-text: 300 0.6rem "PT Serif", cursive;
-  --font-card-section: 300 0.8rem "Playwrite BE WAL", cursive;
-  --font-card-title-side: 500 0.8rem "PT Serif", cursive;
-  --font-card-title: 500 1rem "PT Serif", cursive;
-  --font-card-subtitle: 400 0.6rem "PT Serif", cursive;
-  --font-card-tech: 500 0.7rem "PT Serif", cursive;
+  --font-title-big: bold 2em "PT Serif", serif;
+  --font-title-medium: 300 1.3em "PT Serif", serif;
+  --font-text-big: normal 1.2em "PT Serif", serif;
+  --font-normal: normal 0.75em "PT Serif", cursive;
+  --font-button-form: bold 0.7em "PT Serif", cursive;
+  --font-button: bold 0.7em "Playwrite BE WAL", cursive;
+  --font-card-text: 300 0.6em "PT Serif", cursive;
+  --font-card-section: 300 0.8em "Playwrite BE WAL", cursive;
+  --font-card-title-side: 500 0.8em "PT Serif", cursive;
+  --font-card-title: 500 1em "PT Serif", cursive;
+  --font-card-subtitle: 400 0.6em "PT Serif", cursive;
+  --font-card-tech: 500 0.7em "PT Serif", cursive;
 }
 
 .body {
@@ -38,15 +38,9 @@
   color: var(--color-white);
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
   :root {
-    font-size: 12px;
-  }
-}
-
-@media screen and (min-width: 560px) {
-  :root {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -89,6 +83,12 @@
     grid-template-columns: 6fr 5fr;
     gap: 2rem;
   }
+  .card-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .hero {
@@ -118,7 +118,7 @@
 
 .projectImage {
   display: block;
-  width: calc(100vw - 20px);
+  width: calc(100% - 20px);
   height: auto;
   margin: 0 auto;
 }

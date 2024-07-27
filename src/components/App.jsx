@@ -12,10 +12,18 @@ function App() {
     <div className="body">
     
       <Header />
-      <Hero />
-      <Preview />
-      <Card />
-      <Form />
+
+          <Hero />
+      <main className="main">
+        <div className="card-column">
+          <Preview />
+          <Card />
+        </div>
+        <div>
+          <Form />
+        </div>
+      </main>
+
       <Footer />
       </div>
   );
