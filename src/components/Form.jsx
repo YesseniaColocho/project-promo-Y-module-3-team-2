@@ -42,7 +42,7 @@ function Form(props) {
             id="demo"
             value={props.demo}
             placeholder="Demo"
-            onChange={props.hadleDemo}
+            onChange={props.handleDemo}
           />
         </div>
         <input
@@ -61,9 +61,9 @@ function Form(props) {
           id="desc"
           placeholder="Descripción"
           rows="5"
-          onChange={props.hadleDescription}
-        >{props.description}
-        </textarea>
+          onChange={props.handleDescription}
+          value={props.description}
+        />
       </fieldset>
 
       <fieldset className="addhtmlForm__group">
