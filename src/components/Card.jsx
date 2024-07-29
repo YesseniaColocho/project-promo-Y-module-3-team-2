@@ -1,4 +1,4 @@
-function Card() {
+function Card(props) {
     return(
         <section className="preview">
         <article className="card">
@@ -10,17 +10,16 @@ function Card() {
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
-            <p className="card__job">Full stack Developer</p>
-            <h3 className="card__name">Emmelie Bjôrklund</h3>
+            <p className="card__job">{props.job || "Full stack Developer"}</p>
+            <h3 className="card__name">{props.autor || "Emmelie Bjôrklund"}</h3>
           </div>
 
           <div className="card__project">
-            <h3 className="card__name">Elegant Workspace</h3>
-            <p className="card__slogan">Diseños Exclusivos</p>
+            <h3 className="card__name">{props.name || "Elegant Workspace" }</h3>
+            <p className="card__slogan">{props.slogan || "Diseños Exclusivos"}</p>
             <h3 className="card__descriptionTitle">Product description</h3>
             <p className="card__description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
-              quos? Itaque, molestias eveniet laudantium adipisci vitae ratione
+              {props.description || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, Itaque, molestias eveniet laudantium adipisci vitae ratione"}
             </p>
 
             <div className="card__technicalInfo">
