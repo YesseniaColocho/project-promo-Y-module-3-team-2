@@ -14,7 +14,7 @@
 
   /* FONTS */
   --font-title-brand: 300 1.3em "Playwrite BE WAL", serif;
-  --font-title-biggest: bold 1.7em "Playwrite BE WAL", serif;
+  --font-title-biggest: bold 1.5em "Playwrite BE WAL", serif;
   --font-title-big: bold 2em "PT Serif", serif;
   --font-title-medium: 300 1.3em "PT Serif", serif;
   --font-text-big: normal 1.2em "PT Serif", serif;
@@ -22,11 +22,11 @@
   --font-button-form: bold 0.7em "PT Serif", cursive;
   --font-button: bold 1em "PT Serif", cursive;
   --font-card-text: 300 0.6em "PT Serif", cursive;
-  --font-card-section: 300 0.8em "Playwrite BE WAL", cursive;
-  --font-card-title-side: 500 0.8em "PT Serif", cursive;
+  --font-card-section: 300 1.3em "Playwrite BE WAL", cursive;
+  --font-card-title-side: 500 1.2em "PT Serif", cursive;
   --font-card-title: 500 1em "PT Serif", cursive;
-  --font-card-subtitle: 400 0.6em "PT Serif", cursive;
-  --font-card-tech: 500 0.7em "PT Serif", cursive;
+  --font-card-subtitle: 400 1.2em "PT Serif", cursive;
+  --font-card-tech: 500 0.9em "PT Serif", cursive;
 }
 
 .body {
@@ -72,7 +72,7 @@
   font: var(--font-title-brand);
   text-transhtmlform: capitalize;
   color: var(--color-white);
-  font-size: medium;
+  font-size: small;
 }
 
 @media screen and (min-width: 768px) {
