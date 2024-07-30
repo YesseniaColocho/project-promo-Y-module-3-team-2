@@ -4,11 +4,11 @@
   --color-black-80: rgba(0, 0, 0, 0.8);
   --color-greyish-brown: #505050;
   --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
-  --color-dusk: hwb(346 69% 1% / 0.982);
+  --color-dusk: #6da1d8;
   --color-greyish-brown-two: #575757;
   --color-dark: #302c42;
   --color-warm-grey: #909090;
-  --color-white: #ffffff;
+  --color-white: white;
   --color-dark-lilac: #cb6ce6;
   --color-white-50: rgba(255, 255, 255, 0.5);
 
@@ -23,7 +23,7 @@
   --font-button: bold 1em "PT Serif", cursive;
   --font-card-text: 300 0.6em "PT Serif", cursive;
   --font-card-section: 300 1.3em "Playwrite BE WAL", cursive;
-  --font-card-title-side: 500 1.2em "PT Serif", cursive;
+  --font-card-title-side: 500 1.5em "PT Serif", cursive;
   --font-card-title: 500 1em "PT Serif", cursive;
   --font-card-subtitle: 400 1.2em "PT Serif", cursive;
   --font-card-tech: 500 0.9em "PT Serif", cursive;
@@ -64,7 +64,7 @@
 }
 
 .header .header__companyLogo {
-  height: 70px;
+  height: 5rem;
   color: var(--color-white);
 }
 
@@ -135,7 +135,8 @@
 
   color: var(--color-black);
   font: var(--font-card-text);
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.453);
+  box-shadow: 20px -10px 10px #547ba46d,
+  -20px 10px 10px #547ba4;
   transform: translateY(-25px);
 
   border-radius: 20px;
@@ -367,7 +368,7 @@
 }
 
 .logoSponsor {
-  height: 80px;
+  height: 6.4rem;
 }
 
 .button--link {
