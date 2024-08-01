@@ -34,12 +34,12 @@ function Card(props) {
               </a>
               <a
                 className="icon icon__github"
-                href="#"
+                href="https://github.com/griseldagomez"
                 title="Haz click para ver el código del proyecto"
               >
                 GitHub link
-              </a>
-            </div>
+              </a> 
+             </div>
           </div>
         </article>
       </section>
