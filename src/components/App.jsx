@@ -6,55 +6,33 @@ import Preview from "./Preview";
 import Card from "./Card";
 import Form from "./Form";
 import Footer from "./Footer";
-// import Links  from './Links';
+
 
 function App() {
-    const [name, setName] = useState('');
-    const [slogan, setSlogan] = useState('');
-    const [technologies, setTechnologies] = useState('');
-    const [repo, setRepo] = useState('');
-    const [demo, setDemo] =useState('');
-    const [description, setDescription] = useState('');
-    const [autor, setAutor] = useState('');
-    const [job, setJob] = useState('');
-    const [image, setImage] = useState('');
-    const [photo, setPhoto] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    slogan:'',
+    technologies:'',
+    repo:'',
+    demo:'',
+    descripcion:'',
+    autor:'',
+    job:'',
+    image:'',
+    photo:'', 
+  }); //objeto
   
-    const handleName = (event) => {
-      setName(event.target.value);
-    };
-  
-    const handleSlogan = (event) => {
-      setSlogan(event.target.value);
-    };
-  
-    const handleTechnologies = (event) => {
-      setTechnologies(event.target.value);
-    };
-  
-    const handleRepo = (event) => {
-      setRepo(event.target.value);
-    };
-    const handleDemo = (event) => {
-      setDemo(event.target.value);
-    };
-  
-    const handleDescription = (event) => {
-      setDescription(event.target.value);
-    };
-  
-    const handleAutor = (event) => {
-      setAutor(event.target.value);
-    };
-  
-    const handleJob = (event) => {
-      setJob(event.target.value);
+    const handleSubmit = (event) => {
+      event.preventDefault() ;
     };
 
-    const handleGitHub = (event) => {
-      setGitHub(event.target.value);
-    }
+    const handleInput = (event) => {
+      const key = event.target.id;
+      const value = event.target.value;
+      setForm({...form, [key]: value})
+    }; //evento general para todos los inputs
   
+    
     /* const handleImage = (event) => {
       // setImage(event.target.value);
       setImage(event.currentTarget.files[0])
@@ -75,11 +53,8 @@ function App() {
     const handlePhoto = (event) => {
       setPhoto(event.target.value);
     };
+*/
 
-// const handleIcon = (event) => {
-//       setLinks(inputValue.target.value)
-// }
- */
 
   return (
     <div className="body">
@@ -90,46 +65,18 @@ function App() {
       <main className="main">
         <div className="card-column">
           <Preview />
-          <Card 
-          name={name}
-          slogan={slogan}
-          technologies={technologies}
-          repo={repo}
-          demo={demo}
-          description={description}
-          autor={autor}
-          job={job}
-          image={image}
-          photo={photo}
+          <Card form={form}
           />
         </div>
         <div>
           <Form 
-           name={name}
-           slogan={slogan}
-           technologies={technologies}
-           repo={repo}
-           demo={demo}
-           description={description}
-           autor={autor}
-           job={job}
-           image={image}
-           photo={photo}
- 
-           handleName={handleName}
-           handleSlogan={handleSlogan}
-           handleTechnologies={handleTechnologies}
-           handleRepo={handleRepo}
-           handleDemo={handleDemo}
-           handleDescription={handleDescription}
-           handleAutor={handleAutor}
-           handleJob={handleJob}
-           //handleImage={handleImage}
-           //handlePhoto={handlePhoto}
+            form={form}
+            handleInput={handleInput}
+            handleSubmit={handleSubmit}
           />
         </div>
       </main>
-      {/* <Links  inputLink={handleIcon}/> */}
+      
       <Footer />
       </div>
   );

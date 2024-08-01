@@ -4,13 +4,16 @@
   --color-black-80: rgba(0, 0, 0, 0.8);
   --color-greyish-brown: #505050;
   --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
-  --color-dusk: #6da1d8;
+  --color-dusk:  #6da1d8;
   --color-greyish-brown-two: #575757;
   --color-dark: #302c42;
   --color-warm-grey: #909090;
   --color-white: white;
   --color-dark-lilac: #cb6ce6;
   --color-white-50: rgba(255, 255, 255, 0.5);
+  
+  // linear-gradient(rgb(78, 78, 201), pink);  estos colores degradados pueden quedar bien para el fondo.
+
 
   /* FONTS */
   --font-title-brand: 300 1.3em "Playwrite BE WAL", serif;
@@ -92,8 +95,19 @@
 }
 
 .hero {
+  .titlecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+    
+  // }
   margin-bottom: 3rem;
   background-color: var(--color-dusk);
+  // display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,11 +116,13 @@
   }
 }
 
-.hero .title {
-  font: var(--font-title-brand);
-  margin-bottom: 8px;
-  font-weight: bold;
-}
+// // .hero .title {
+// //   font: var(--font-title-brand);
+// //   margin-bottom: 8px;
+// //   font-weight: bold;
+// }
+
+  
 
 .hero .hero__text {
   font: var(--font-text-big);
@@ -296,7 +312,7 @@
     to left,
     transparent,
     #343045 25%,
-    #c0b7e8 45%,
+    #e4b7e8 45%,
     var(--color-dark-lilac) 65%,
     #343045 75%,
     transparent

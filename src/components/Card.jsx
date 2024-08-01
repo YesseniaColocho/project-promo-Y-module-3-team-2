@@ -1,4 +1,14 @@
-function Card(props) {
+function Card({ form }) { //destructurin de props
+  const {
+    name,
+    description,
+    slogan,
+    repo,
+    demo,
+    autor,
+    job,
+  } = form;//destructuring de form(objeto)
+ 
     return(
         <section className="preview">
         <article className="card">
@@ -10,16 +20,16 @@ function Card(props) {
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
-            <p className="card__job">{props.job || "Instructora de yoga"}</p>
-            <h3 className="card__name">{props.autor || "Ainara González"}</h3>
+            <p className="card__job">{job || "Instructora de yoga"}</p>
+            <h3 className="card__name">{autor || "Ainara González"}</h3>
           </div>
 
           <div className="card__project">
-            <h3 className="card__name">{props.name || "Semillas de Yoga" }</h3>
-            <p className="card__slogan">{props.slogan || "Conocerte a ti mismo es el comienzo de toda sabiduría."}</p>
+            <h3 className="card__name">{name || "Semillas de Yoga" }</h3>
+            <p className="card__slogan">{slogan || "Conocerte a ti mismo es el comienzo de toda sabiduría."}</p>
             <h3 className="card__descriptionTitle">Descripción del producto:</h3>
             <p className="card__description">
-              {props.description || "El proyecto Semillas de Yoga está diseñado para promover la salud física, mental y emocional a través de la práctica regular de yoga. Nuestro objetivo es proporcionar a los participantes herramientas y técnicas que mejoren su calidad de vida y fomenten una conexión más profunda entre el cuerpo y la mente. Este programa inclusivo está adaptado para satisfacer las necesidades de todos, independientemente de su edad, experiencia o nivel de habilidad."}
+              {description || "El proyecto Semillas de Yoga está diseñado para promover la salud física, mental y emocional a través de la práctica regular de yoga. Nuestro objetivo es proporcionar a los participantes herramientas y técnicas que mejoren su calidad de vida y fomenten una conexión más profunda entre el cuerpo y la mente. Este programa inclusivo está adaptado para satisfacer las necesidades de todos, independientemente de su edad, experiencia o nivel de habilidad."}
             </p>
 
             <div className="card__technicalInfo">
@@ -27,7 +37,7 @@ function Card(props) {
 
               <a
                 className="icon icon__www"
-                href={props.demo || "#"}
+                href={demo || "#"}
                 target="_blank"
                 title="Haz click para ver el proyecto online"
               >
@@ -35,7 +45,7 @@ function Card(props) {
               </a>
               <a
                 className="icon icon__github"
-                href={props.repo || "https://github.com"}
+                href={repo || "https://github.com"}
                 target="_blank"
                 title="Haz click para ver el código del proyecto"
               >

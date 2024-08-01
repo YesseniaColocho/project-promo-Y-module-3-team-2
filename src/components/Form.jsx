@@ -1,96 +1,118 @@
-function Form(props) {
+function Form({
+  form,
+  handleInput,
+  handleSubmit, //destructuring de props
+}) {
+  const {
+    name,
+    slogan,
+    repo,
+    technologies,
+    demo,
+    description,
+    autor,
+    job,
+    image,
+    photo,
+  } = form; //destructuring (form/objeto)
 
   return(
     <form className="addhtmlForm">
-      <h2 className="title">Rellena tu formulario</h2>
-      <fieldset className="addhtmlForm__group">
-        <legend className="addhtmlForm__title">
-          Cuéntanos sobre el proyecto
-        </legend>
-        <input
-          className="addhtmlForm__input"
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Nombre del proyecto"
-          value={props.name}
-          onChange={props.handleName}
-        />
-        <input
-          className="addhtmlForm__input"
-          type="text"
-          name="slogan"
-          id="slogan"
-          value={props.slogan}
-          placeholder="Slogan"
-          onChange={props.handleSlogan}
-        />
-        <div className="addhtmlForm__2col">
+        <h2 className="title">Rellena tu formulario</h2>
+        <fieldset className="addhtmlForm__group">
+          <legend className="addhtmlForm__title">
+            Cuéntanos sobre el proyecto
+          </legend>
+
           <input
             className="addhtmlForm__input"
-            type="url"
-            name="repo"
-            id="repo"
-            value={props.repo}
-            placeholder="Repositorio"
-            onChange={props.handleRepo}
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nombre del proyecto"
+            value={name}
+            onChange={handleInput}
           />
+
           <input
             className="addhtmlForm__input"
-            type="url"
-            name="demo"
-            id="demo"
-            value={props.demo}
-            placeholder="Demo"
-            onChange={props.handleDemo}
+            type="text"
+            name="slogan"
+            id="slogan"
+            value={slogan}
+            placeholder="Slogan"
+            onChange={handleInput}
           />
-        </div>
-        <input
-          className="addhtmlForm__input"
-          type="text"
-          name="technologies"
-          id="technologies"
-          value={props.technologies}
-          placeholder="Tecnologías"
-          onChange={props.handleTechnologies}
-        />
-        <textarea
-          className="addhtmlForm__input"
-          type="text"
-          name="desc"
-          id="desc"
-          placeholder="Descripción"
-          rows="5"
-          onChange={props.handleDescription}
-          value={props.description}
-        />
-      </fieldset>
 
-      <fieldset className="addhtmlForm__group">
-        <legend className="addhtmlForm__title">
-          Cuéntanos sobre la autora
-        </legend>
-        <input
-          className="addhtmlForm__input"
-          type="text"
-          name="autor"
-          id="autor"
-          value={props.autor}
-          placeholder="Nombre"
-          onChange={props.handleAutor}
-        />
-        <input
-          className="addhtmlForm__input"
-          type="text"
-          name="job"
-          id="job"
-          value={props.job}
-          placeholder="Trabajo"
-          onChange={props.handleJob}
-        />
-      </fieldset>
+          <div className="addhtmlForm__2col">
+            <input
+              className="addhtmlForm__input"
+              type="url"
+              name="repo"
+              id="repo"
+              value={repo}
+              placeholder="Repositorio"
+              onChange={handleInput}
+            />
 
-      <fieldset className="addhtmlForm__group--upload">
+            <input
+              className="addhtmlForm__input"
+              type="url"
+              name="demo"
+              id="demo"
+              value={demo}
+              placeholder="Demo"
+              onChange={handleInput}
+            />
+          </div>
+
+          <input
+            className="addhtmlForm__input"
+            type="text"
+            name="technologies"
+            id="technologies"
+            value={technologies}
+            placeholder="Tecnologías"
+            onChange={handleInput}
+          />
+
+          <textarea
+            className="addhtmlForm__input"
+            type="text"
+            name="desc"
+            id="description"
+            placeholder="Descripción"
+            rows="5"
+            onChange={handleInput}
+            value={description}
+          />
+        </fieldset>
+
+        <fieldset className="addhtmlForm__group">
+          <legend className="addhtmlForm__title">
+            Cuéntanos sobre la autora
+          </legend>
+          <input
+            className="addhtmlForm__input"
+            type="text"
+            name="autor"
+            id="autor"
+            value={autor}
+            placeholder="Nombre"
+            onChange={handleInput}
+          />
+         
+          <input
+            className="addhtmlForm__input"
+            type="text"
+            name="job"
+            id="job"
+            value={job}
+            placeholder="Trabajo"
+            onChange={handleInput}
+          />
+ </fieldset>
+ <fieldset className="addhtmlForm__group--upload">
         <label htmlFor="image" className="button">
           Subir foto del proyecto
         </label>
@@ -99,8 +121,8 @@ function Form(props) {
           type="file"
           name="image"
           id="image"
-          value={props.image}
-          onChange={props.handleImage}
+          value={image}
+          onChange={handleInput}
         />
         <label htmlFor="photo" className="button">
           Subir foto de la autora
@@ -110,12 +132,14 @@ function Form(props) {
           type="file"
           name="photo"
           id="photo"
-          value={props.photo}
-          onChange={props.handlePhoto}
+          value={photo}
+          onChange={handleInput}
         />
       </fieldset>
-      <button className="button--large">Guardar proyecto</button>
-    </form>
+      <button className="button--large" value= "enviar" onClick={handleSubmit}>Guardar proyecto</button>
+          
+      </form>
+
   )
 }
 

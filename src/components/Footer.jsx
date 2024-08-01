@@ -1,4 +1,4 @@
-import logo from "../images/logo.png";
+import logo from "../images/logo2.png";
 function Footer() {
   return (
     <footer className="footer">
