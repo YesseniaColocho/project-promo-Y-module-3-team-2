@@ -24,6 +24,11 @@ function App() {
   
     const handleSubmit = (event) => {
       event.preventDefault() ;
+      //fetch..... ademas de la url- configuracion de la llamada moth"post"
+     //fecht cuando la usuaria hace click  en guardar el evento
+     //:bodyJSON.....(form)
+     //them ....lo de siempre.
+     //la url sera una variable de estado.
     };
 
     const handleInput = (event) => {
@@ -31,6 +36,7 @@ function App() {
       const value = event.target.value;
       setForm({...form, [key]: value})
     }; //evento general para todos los inputs
+
   
     
     /* const handleImage = (event) => {

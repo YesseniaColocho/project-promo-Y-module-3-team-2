@@ -1,4 +1,5 @@
-import logo from "../images/logo2.png";
+import logo from "../images/logo-adalab.png";
+import logo2 from "../images/logo2.png";
 
 
 function Header() {
@@ -11,7 +12,7 @@ function Header() {
         >
           <img
             className="header__companyLogo"
-            src={logo}
+            src={logo2}
             alt="Logo proyectos molones"
           />
          
