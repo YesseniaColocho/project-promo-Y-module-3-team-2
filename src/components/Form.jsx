@@ -17,7 +17,7 @@ function Form({
   } = form; //destructuring (form/objeto)
 
   return(
-    <form className="addhtmlForm">
+    <form className="addhtmlForm" onSubmit={handleSubmit}>
         <h2 className="title">Rellena tu formulario</h2>
         <fieldset className="addhtmlForm__group">
           <legend className="addhtmlForm__title">
@@ -32,6 +32,7 @@ function Form({
             placeholder="Nombre del proyecto"
             value={name}
             onChange={handleInput}
+            required
           />
 
           <input
@@ -42,6 +43,7 @@ function Form({
             value={slogan}
             placeholder="Slogan"
             onChange={handleInput}
+            required
           />
 
           <div className="addhtmlForm__2col">
@@ -53,6 +55,7 @@ function Form({
               value={repo}
               placeholder="Repositorio"
               onChange={handleInput}
+              required
             />
 
             <input
@@ -63,6 +66,7 @@ function Form({
               value={demo}
               placeholder="Demo"
               onChange={handleInput}
+              required
             />
           </div>
 
@@ -74,6 +78,7 @@ function Form({
             value={technologies}
             placeholder="Tecnologías"
             onChange={handleInput}
+            required
           />
 
           <textarea
@@ -85,6 +90,7 @@ function Form({
             rows="5"
             onChange={handleInput}
             value={description}
+            required
           />
         </fieldset>
 
@@ -100,6 +106,7 @@ function Form({
             value={autor}
             placeholder="Nombre"
             onChange={handleInput}
+            required
           />
          
           <input
@@ -110,6 +117,7 @@ function Form({
             value={job}
             placeholder="Trabajo"
             onChange={handleInput}
+            required
           />
  </fieldset>
  <fieldset className="addhtmlForm__group--upload">
@@ -136,7 +144,7 @@ function Form({
           onChange={handleInput}
         />
       </fieldset>
-      <button className="button--large" value= "enviar" onClick={handleSubmit}>Guardar proyecto</button>
+      <input type="submit" value="Guardar proyecto"  className="button--large"/>
           
       </form>
 
