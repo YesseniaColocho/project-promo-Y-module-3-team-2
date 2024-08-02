@@ -18,7 +18,7 @@ function Header() {
          
           {/* <h1 className="header__title">Proyectos molones</h1> */}
         </a>
-        <img className="logoSponsor" src={logo} alt="Logo Adalab" />
+        <img className="logoSponsor2" src={logo} alt="Logo Adalab" />
          
       </header>
     )

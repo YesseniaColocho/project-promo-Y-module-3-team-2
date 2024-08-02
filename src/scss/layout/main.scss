@@ -67,13 +67,13 @@
 }
 
 .header .header__companyLogo {
-  height: 5rem;
+  height: 7rem;
   color: var(--color-white);
 }
 
 .header .header__title {
   font: var(--font-title-brand);
-  text-transhtmlform: capitalize;
+  text-transform: capitalize;
   color: var(--color-white);
   font-size: small;
 }
@@ -95,19 +95,14 @@
 }
 
 .hero {
+  margin-bottom: 3rem;
+
   .titlecontainer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center; 
   }
-  
-    
-  // }
-  margin-bottom: 3rem;
-  background-color: var(--color-dusk);
-  // display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -142,7 +137,7 @@
 .preview .card {
   margin-inline: 20px;
 
-  transhtmlform: translateY(-45px);
+  transform: translateY(-45px);
 }
 
 .card {
@@ -181,12 +176,12 @@
   position: relative;
   margin: 15px 10px 1rem 0;
   text-align: center;
-  text-transhtmlform: capitalize;
+  text-transform: capitalize;
 
   font: var(--font-card-section);
 }
 
-.card .card__projectTitle::behtmlfore {
+.card .card__projectTitle::before {
   content: "";
   position: absolute;
   top: calc(50% - 1px);
@@ -250,7 +245,7 @@
 
 .card .card__descriptionTitle {
   font-weight: inherit;
-  text-transhtmlform: capitalize;
+  text-transform: capitalize;
 }
 
 .card .card__technicalInfo {
@@ -285,6 +280,7 @@
   font: var(--font-title-biggest);
   margin-block: 18px;
   margin-bottom: 0;
+  color: var(--color-greyish-brown-two);
 }
 
 .addhtmlForm .addhtmlForm__title {
@@ -293,12 +289,13 @@
   padding-block: 0.4rem;
   margin-block: 0.5rem;
   border: solid 2px transparent;
+  color: #575757;
 
   font: var(--font-title-medium);
   text-align: center;
 }
 
-.addhtmlForm .addhtmlForm__title:behtmlfore {
+.addhtmlForm .addhtmlForm__title:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -331,16 +328,16 @@
 
   padding: 8.5px 16px 8.5px 16px;
   border-radius: 40px;
-  border: solid 2px var(--color-white);
+  border: solid 2px var(--color-warm-grey);
 
-  color: var(--color-white);
+  color: var(--color-black);
   background-color: transparent;
 
   font: var(--font-normal);
 }
 
 .addhtmlForm .addhtmlForm__input::placeholder {
-  color: var(--color-white-50);
+  color: var(--color-dark);
 }
 
 .addhtmlForm .addhtmlForm__group--upload {
@@ -381,11 +378,17 @@
 
 .title {
   text-align: center;
-  text-transhtmlform: capitalize;
+  text-transform: capitalize;
 }
 
 .logoSponsor {
-  height: 6.4rem;
+  height: 7rem;
+ 
+}
+.logoSponsor2 {
+  height: 3rem;
+
+ 
 }
 
 .button--link {
@@ -397,7 +400,6 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transhtmlform: uppercase;
   text-decoration: none;
 
   -webkit-backdrop-filter: blur(10px);
@@ -428,7 +430,7 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transhtmlform: none;
+  text-transform: none;
   text-decoration: none;
   text-align: center;
 
@@ -451,7 +453,7 @@
   padding: 5px 18px;
   color: var(--color-white);
   font: var(--font-button);
-  text-transhtmlform: none;
+  text-transform: none;
   text-decoration: none;
   text-align: center;
 
