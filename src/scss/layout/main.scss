@@ -173,7 +173,7 @@
   position: relative;
   margin: 15px 10px 1rem 0;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: none;
 
   font: var(--font-card-section);
 }
@@ -186,6 +186,7 @@
   left: 0;
   right: 0;
   z-index: 0;
+  
 
   background-image: linear-gradient(to right,
       white,
@@ -197,6 +198,7 @@
 
 .card .card__projectTitle--text {
   position: relative;
+  font-size: 16px;
   padding-inline: 0.1em;
   z-index: 1;
   background-color: var(--color-white);
