@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from "react";
 import "../scss/App.scss";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -7,39 +7,47 @@ import Card from "./Card";
 import Form from "./Form";
 import Footer from "./Footer";
 
-
 function App() {
   const [form, setForm] = useState({
-    name: '',
-    slogan:'',
-    technologies:'',
-    repo:'',
-    demo:'',
-    descripcion:'',
-    autor:'',
-    job:'',
-    image:'',
-    photo:'', 
+    name: "",
+    slogan: "",
+    technologies: "",
+    repo: "",
+    demo: "",
+    desc: "",
+    autor: "",
+    job: "",
+    image: "",
+    photo: "",
   }); //objeto
-  
-    const handleSubmit = (event) => {
-      event.preventDefault() ;
-      //fetch..... ademas de la url- configuracion de la llamada moth"post"
-     //fecht cuando la usuaria hace click  en guardar el evento
-     //:bodyJSON.....(form)
-     //them ....lo de siempre.
-     //la url sera una variable de estado.
-    };
 
-    const handleInput = (event) => {
-      const key = event.target.id;
-      const value = event.target.value;
-      setForm({...form, [key]: value})
-    }; //evento general para todos los inputs
-
-  
+  const handleSubmit = (event) => {
     
-    /* const handleImage = (event) => {
+    event.preventDefault();
+
+    form.photo = "https://static.wikia.nocookie.net/minion/images/3/34/Los_Minions.jpg/revision/latest?cb=20240201133153&path-prefix=es";
+    form.image = "https://static.wikia.nocookie.net/minion/images/3/34/Los_Minions.jpg/revision/latest?cb=20240201133153&path-prefix=es";
+
+    fetch("https://dev.adalab.es/api/projectCard", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
+  const handleInput = (event) => {
+    const key = event.target.id;
+    const value = event.target.value;
+    setForm({ ...form, [key]: value });
+  }; //evento general para todos los inputs
+
+  /* const handleImage = (event) => {
       // setImage(event.target.value);
       setImage(event.currentTarget.files[0])
     };
@@ -61,30 +69,27 @@ function App() {
     };
 */
 
-
   return (
     <div className="body">
-    
       <Header />
 
-          <Hero />
+      <Hero />
       <main className="main">
         <div className="card-column">
           <Preview />
-          <Card form={form}
-          />
+          <Card form={form} />
         </div>
         <div>
-          <Form 
+          <Form
             form={form}
             handleInput={handleInput}
             handleSubmit={handleSubmit}
           />
         </div>
       </main>
-      
+
       <Footer />
-      </div>
+    </div>
   );
 }
 

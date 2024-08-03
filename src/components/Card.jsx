@@ -1,7 +1,7 @@
 function Card({ form }) { //destructurin de props
   const {
     name,
-    description,
+    desc,
     slogan,
     repo,
     demo,
@@ -29,7 +29,7 @@ function Card({ form }) { //destructurin de props
             <p className="card__slogan">{slogan || "Conocerte a ti mismo es el comienzo de toda sabiduría."}</p>
             <h3 className="card__descriptionTitle">Descripción del producto:</h3>
             <p className="card__description">
-              {description || "El proyecto Semillas de Yoga está diseñado para promover la salud física, mental y emocional a través de la práctica regular de yoga. Nuestro objetivo es proporcionar a los participantes herramientas y técnicas que mejoren su calidad de vida y fomenten una conexión más profunda entre el cuerpo y la mente. Este programa inclusivo está adaptado para satisfacer las necesidades de todos, independientemente de su edad, experiencia o nivel de habilidad."}
+              {desc || "El proyecto Semillas de Yoga está diseñado para promover la salud física, mental y emocional a través de la práctica regular de yoga. Nuestro objetivo es proporcionar a los participantes herramientas y técnicas que mejoren su calidad de vida y fomenten una conexión más profunda entre el cuerpo y la mente. Este programa inclusivo está adaptado para satisfacer las necesidades de todos, independientemente de su edad, experiencia o nivel de habilidad."}
             </p>
 
             <div className="card__technicalInfo">

@@ -9,7 +9,7 @@ function Form({
     repo,
     technologies,
     demo,
-    description,
+    desc,
     autor,
     job,
     image,
@@ -85,11 +85,11 @@ function Form({
             className="addhtmlForm__input"
             type="text"
             name="desc"
-            id="description"
+            id="desc"
             placeholder="Descripción"
             rows="5"
             onChange={handleInput}
-            value={description}
+            value={desc}
             required
           />
         </fieldset>
