@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState} from "react";
 import "../scss/App.scss";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -8,7 +8,8 @@ import Form from "./Form";
 import Footer from "./Footer";
 
 function App() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState(
+  {
     name: "",
     slogan: "",
     technologies: "",
@@ -20,6 +21,14 @@ function App() {
     image: "",
     photo: "",
   }); //objeto
+
+  useEffect(() => {
+    const localStorageForm = localStorage.getItem("form");
+     
+    if (localStorageForm !== null) {
+      setForm(JSON.parse(localStorageForm));
+    }
+  }, []);
 
   const handleSubmit = (event) => {
     
@@ -45,6 +54,8 @@ function App() {
     const key = event.target.id;
     const value = event.target.value;
     setForm({ ...form, [key]: value });
+
+    localStorage.setItem('form', JSON.stringify(form));
   }; //evento general para todos los inputs
 
   /* const handleImage = (event) => {
