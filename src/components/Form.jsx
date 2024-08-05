@@ -3,6 +3,7 @@ function Form({
   handleInput,
   handleImage,
   handleSubmit, //destructuring de props
+  handleAuthorImg
 }) {
   const {
     name,
@@ -140,8 +141,7 @@ function Form({
           type="file"
           name="photo"
           id="photo"
-          value={photo}
-          onChange={handleInput}
+          onChange={handleAuthorImg}
         />
       </fieldset>
       <input type="submit" value="Guardar proyecto"  className="button--large"/>

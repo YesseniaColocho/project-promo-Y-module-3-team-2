@@ -1,4 +1,6 @@
-function Card({ form }) { //destructurin de props
+import Image from "../images/photo-card.jpg"
+
+function Card({ form, authorImage }) { //destructurin de props
   const {
     name,
     desc,
@@ -19,7 +21,7 @@ function Card({ form }) { //destructurin de props
           </h2>
 
           <div className="card__author">
-            <div className="card__authorPhoto"></div>
+            <div className="card__authorPhoto"><img src={ authorImage ||Image}/></div>
             <p className="card__job">{job || "Instructora de yoga"}</p>
             <h3 className="card__name">{autor || "Ainara González"}</h3>
           </div>

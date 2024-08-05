@@ -215,10 +215,16 @@
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  background-image: url("/src/images/photo-card.jpg");
   background-position: center;
   background-size: cover;
   margin-bottom: 0.8rem;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .card .card__job {
