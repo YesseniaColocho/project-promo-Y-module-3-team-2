@@ -58,6 +58,17 @@ function App() {
     localStorage.setItem('form', JSON.stringify(form));
   }; //evento general para todos los inputs
 
+  const [projectImage, setProjectImage] = useState ('')
+
+  const handleImage = (e) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+        if(reader.result && typeof reader.result === 'string') {
+          setProjectImage( reader.result.toString())
+        }
+    }
+    reader.readAsDataURL(e.target.files[0])
+  }
   /* const handleImage = (event) => {
       // setImage(event.target.value);
       setImage(event.currentTarget.files[0])
@@ -87,13 +98,14 @@ function App() {
       <Hero />
       <main className="main">
         <div className="card-column">
-          <Preview />
+          <Preview src={projectImage} />
           <Card form={form} />
         </div>
         <div>
           <Form
             form={form}
             handleInput={handleInput}
+            handleImage={handleImage}
             handleSubmit={handleSubmit}
           />
         </div>

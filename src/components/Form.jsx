@@ -1,6 +1,7 @@
 function Form({
   form,
   handleInput,
+  handleImage,
   handleSubmit, //destructuring de props
 }) {
   const {
@@ -129,8 +130,7 @@ function Form({
           type="file"
           name="image"
           id="image"
-          value={image}
-          onChange={handleInput}
+          onChange={handleImage}
         />
         <label htmlFor="photo" className="button">
           Subir foto de la autora

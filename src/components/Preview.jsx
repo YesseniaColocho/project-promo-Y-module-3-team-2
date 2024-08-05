@@ -1,8 +1,8 @@
 import preview from "../images/photo-principal.jpg";
 
-function Preview() {
+function Preview({src}) {
     return(
-        <img className="projectImage" src={preview} alt="mujer diseñando con un pincel" />
+        <img className="projectImage" src={src || preview} alt="mujer diseñando con un pincel" />
     )
 }
 
