@@ -4,7 +4,10 @@
   --color-black-80: rgba(0, 0, 0, 0.8);
   --color-greyish-brown: #505050;
   --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
-  --color-dusk: linear-gradient(rgb(78, 78, 201), pink); //el color celeste en vez de azul quedaria mejor  // #6da1d8;
+  --color-dusk: linear-gradient(
+    rgb(78, 78, 201),
+    pink
+  ); //el color celeste en vez de azul quedaria mejor  // #6da1d8;
   --color-greyish-brown-two: #575757;
   --color-dark: #302c42;
   --color-warm-grey: #909090;
@@ -13,7 +16,6 @@
   --color-white-50: rgba(255, 255, 255, 0.5);
 
   // linear-gradient(rgb(78, 78, 201), pink);  estos colores degradados pueden quedar bien para el fondo.
-
 
   /* FONTS */
   --font-title-brand: 300 1.3em "Playwrite BE WAL", serif;
@@ -118,8 +120,6 @@
 // //   font-weight: bold;
 // }
 
-
-
 .hero .hero__text {
   font: var(--font-text-big);
   text-align: center;
@@ -147,8 +147,7 @@
 
   color: var(--color-black);
   font: var(--font-card-text);
-  box-shadow: 20px -10px 10px #547ba46d,
-    -20px 10px 10px #547ba49b;
+  box-shadow: 20px -10px 10px #547ba46d, -20px 10px 10px #547ba49b;
   transform: translateY(-25px);
 
   border-radius: 20px;
@@ -156,13 +155,17 @@
   backdrop-filter: blur(10px);
   border-style: solid;
   border-width: 1px;
-  border-image-source: linear-gradient(to bottom,
-      var(--color-white) 0%,
-      rgba(0, 0, 0, 0));
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--color-white) 0%,
+    rgba(0, 0, 0, 0)
+  );
   border-image-slice: 1;
-  background-image: linear-gradient(to bottom,
+  background-image: linear-gradient(
+      to bottom,
       var(--color-white),
-      var(--color-white)),
+      var(--color-white)
+    ),
     linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -186,14 +189,15 @@
   left: 0;
   right: 0;
   z-index: 0;
-  
 
-  background-image: linear-gradient(to right,
-      white,
-      #232323 15%,
-      var(--color-black),
-      #232323 85%,
-      white);
+  background-image: linear-gradient(
+    to right,
+    white,
+    #232323 15%,
+    var(--color-black),
+    #232323 85%,
+    white
+  );
 }
 
 .card .card__projectTitle--text {
@@ -219,11 +223,13 @@
   background-size: cover;
   margin-bottom: 0.8rem;
   overflow: hidden;
-  img{
-    width: 100%;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
     min-width: 100%;
     min-height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -305,13 +311,15 @@
   margin-bottom: -2px;
   border-radius: inherit;
   background-color: transparent;
-  background-image: linear-gradient(to left,
-      transparent,
-      #343045 25%,
-      #e4b7e8 45%,
-      var(--color-dark-lilac) 65%,
-      #343045 75%,
-      transparent);
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    #343045 25%,
+    #e4b7e8 45%,
+    var(--color-dark-lilac) 65%,
+    #343045 75%,
+    transparent
+  );
 }
 
 .addhtmlForm .addhtmlForm__group {
@@ -380,13 +388,11 @@
 
 .logoSponsor {
   height: 7rem;
-
 }
 
 .logoSponsor2 {
   height: 3rem;
   margin: 20px;
-
 }
 
 .button--link {
@@ -407,9 +413,11 @@
   border-image-source: linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   border-image-slice: 1;
   border-radius: 20px;
-  background-image: linear-gradient(to right,
-      var(--color-dark-lilac) -2%,
-      #4280f4 98%);
+  background-image: linear-gradient(
+    to right,
+    var(--color-dark-lilac) -2%,
+    #4280f4 98%
+  );
   /*
   background-image: linear-gradient(to bottom, var(--color-dark-lilac), var(--color-dark-lilac)), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
@@ -431,9 +439,11 @@
   text-align: center;
 
   border-radius: 40px;
-  background-image: linear-gradient(to right,
-      var(--color-dark-lilac) -2%,
-      #4280f4 98%);
+  background-image: linear-gradient(
+    to right,
+    var(--color-dark-lilac) -2%,
+    #4280f4 98%
+  );
 
   cursor: pointer;
 }
@@ -453,9 +463,11 @@
 
   border-radius: 40px;
   background-color: transparent;
-  background-image: linear-gradient(to right,
-      var(--color-dark-lilac) -2%,
-      #4280f4 98%);
+  background-image: linear-gradient(
+    to right,
+    var(--color-dark-lilac) -2%,
+    #4280f4 98%
+  );
 
   cursor: pointer;
 }
