@@ -3,11 +3,14 @@ import "../scss/App.scss";
 import Header from "./Header";
 import Hero from "./Hero";
 import Preview from "./Preview";
+import UrlPreview from "./UrlPreview";
 import Card from "./Card";
 import Form from "./Form";
 import Footer from "./Footer";
 
 function App() {
+  const [url, setUrl] = useState(null); // agregue una variable de estado
+
   const [form, setForm] = useState({
     name: "",
     slogan: "",
@@ -47,7 +50,10 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-      });
+        // Asignamos la url de la tarjeta a la variable de estado
+        setUrl(data.cardURL);
+      })
+      .catch((error) => console.log(error));
   };
 
   const handleInput = (event) => {
@@ -83,27 +89,6 @@ function App() {
     reader.readAsDataURL(e.target.files[0]);
   };
 
-  /* const handleImage = (event) => {
-      // setImage(event.target.value);
-      setImage(event.currentTarget.files[0])
-    };
-    if (event.currentTarget.files.length > 0) {
-      const myFile = event.currentTarget.files[0];
-
-      // añado un evento load al manejador de ficheros
-      // por qué añado un evento, pues porque esto es una acción asíncrona, imaginemos que el fichero pesa 5 Gb, el navegador puede tardar unos cuantos segundos en cargar y procesar el fichero, por eso le decimos "navegador, cuando termines de cargar el fichero me ejecutas el método  image"
-      fr.addEventListener('load', getImage);
-
-      // le digo al manejador de ficheros que maneje, que cargue el fichero
-      fr.readAsDataURL(myFile);
-    }
-    // si la usuaria no ha elegido ningún fichero y ha puslado en cerrar la ventana de nuestro ordenador, no hago nada
- 
-  
-    const handlePhoto = (event) => {
-      setPhoto(event.target.value);
-    };
-*/
 
   return (
     <div className="body">
@@ -114,6 +99,7 @@ function App() {
         <div className="card-column">
           <Preview src={projectImage} />
           <Card form={form} authorImage={authorImage} />
+          <UrlPreview url={url} />
         </div>
         <div>
           <Form
