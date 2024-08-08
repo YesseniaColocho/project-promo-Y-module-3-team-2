@@ -35,11 +35,6 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    form.photo =
-      "https://static.wikia.nocookie.net/minion/images/3/34/Los_Minions.jpg/revision/latest?cb=20240201133153&path-prefix=es";
-    form.image =
-      "https://static.wikia.nocookie.net/minion/images/3/34/Los_Minions.jpg/revision/latest?cb=20240201133153&path-prefix=es";
-
     fetch("https://dev.adalab.es/api/projectCard", {
       method: "POST",
       headers: {
@@ -89,7 +84,6 @@ function App() {
     };
     reader.readAsDataURL(e.target.files[0]);
   };
-
 
   return (
     <div className="body">
