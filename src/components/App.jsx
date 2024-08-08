@@ -50,34 +50,35 @@ function App() {
       });
   };
 
-  const handleInput = (event) => {
+  const handleInput = async (event) => {
     const key = event.target.id;
     const value = event.target.value;
-    setForm({ ...form, [key]: value });
-
-    localStorage.setItem("form", JSON.stringify(form));
+    const updatedForm = { ...form, [key]: value };
+    setForm(updatedForm);
+    console.log(updatedForm[key], value);
+    localStorage.setItem("form", JSON.stringify(updatedForm));
   }; //evento general para todos los inputs
-
-  const [projectImage, setProjectImage] = useState("");
 
   const handleImage = (e) => {
     //fotografía
     const reader = new FileReader();
     reader.onload = () => {
       if (reader.result && typeof reader.result === "string") {
-        setProjectImage(reader.result.toString());
+        const updatedForm = { ...form, image: reader.result.toString() };
+        setForm(updatedForm);
+        localStorage.setItem("form", JSON.stringify(updatedForm));
       }
     };
     reader.readAsDataURL(e.target.files[0]);
   };
 
-  const [authorImage, setauthorImage] = useState("");
-
   const handleAuthorImg = (e) => {
     const reader = new FileReader();
     reader.onload = () => {
       if (reader.result && typeof reader.result === "string") {
-        setauthorImage(reader.result.toString());
+        const updatedForm = { ...form, photo: reader.result.toString() };
+        setForm(updatedForm);
+        localStorage.setItem("form", JSON.stringify(updatedForm));
       }
     };
     reader.readAsDataURL(e.target.files[0]);
@@ -112,8 +113,8 @@ function App() {
       <Hero />
       <main className="main">
         <div className="card-column">
-          <Preview src={projectImage} />
-          <Card form={form} authorImage={authorImage} />
+          <Preview src={form.image} />
+          <Card form={form} authorImage={form.photo} />
         </div>
         <div>
           <Form
